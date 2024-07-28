@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv6e56nwp6cqp"]
+
+[ext_resource type="PackedScene" uid="uid://bo6evtrjaflx6" path="res://player/player.tscn" id="1_in1ce"]
+[ext_resource type="PackedScene" uid="uid://cvmqiobjyb8iw" path="res://systems/mob_spawner.tscn" id="2_hharx"]
+
+[node name="test_enemy" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_in1ce")]
+position = Vector2(506, 296)
+ritual_damage = 1
+ritual_interval = 2.0
+
+[node name="Mob_Spawner" parent="." instance=ExtResource("2_hharx")]
+mobs_per_minute = 100.0
